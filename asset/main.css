@@ -3,14 +3,25 @@
 	padding: 0;
 }
 
-#map{
-	width: 100%;
-	height: 90vh;
-	border: 2px solid black;
+body{
+	background-color: #C3D7FF;
+}
+.botones{
+	background-color: #7EB2AF;
 }
 
+#map{
+
+	height: 70vh;
+	border: 10px solid #DDAA98;
+}
+.inp{
+	margin: 40px auto;
+	padding: 10px 15px;
+}
 button{
-	margin: 15px auto;
+	width: 130px;
+	margin: 55px auto;
 	padding: 10px 15px;
 	color: white;
 	background-color: #faae27;
@@ -24,4 +35,9 @@ button{
 
 button:hover,button:focus{
 	outline:0;
+}
+
+.segundo{
+	margin-top: 30px;
+	background-color: #C3D7FF;
 }

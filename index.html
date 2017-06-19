@@ -11,13 +11,24 @@
 </head>
 <body>
 	<section>
-		<div class="row">
-			<div class="col-md-12 col-sm-12">
+		<div class="row botones">
+			<div class="col-md-3 col-sm-12">
 				<button id="encuentrame">Encuentrame</button>
 			</div>
+			<div class="col-md-3 col-sm-12 inp">
+				<strong>Origen<br></strong><input value="Introduce una ubicación" style="color:#bbb" id="origen"></input>
+			</div>
+			<div class="col-md-3 col-sm-12 inp">
+				<strong>Destino<br></strong><input value="Introduce una ubicación" style="color:#bbb" id="destino"></input>
+			</div>
+			<div class="col-md-3 col-sm-12">
+				<button id="encuentrame">Ruta</button>
+			</div>
 		</div>
+	</section>
+	<section class="segundo container">
 		<div class="row">
-			<div class="col-md-10 col-sm-10" id="map">
+			<div class="col-md-10 col-md-offset-1 col-sm-12" id="map">
 				<!-- aqui iria nuestro mapa-->
 			</div>
 		</div>
