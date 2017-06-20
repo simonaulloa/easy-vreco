@@ -1,19 +1,16 @@
+/*general*/
 *{
 	margin: 0;
 	padding: 0;
 }
 
-body{
+.primero{
 	background-color: #C3D7FF;
 }
+
+/*primera seccion*/
 .botones{
 	background-color: #7EB2AF;
-}
-
-#map{
-
-	height: 70vh;
-	border: 10px solid #DDAA98;
 }
 .inp{
 	margin: 40px auto;
@@ -27,7 +24,7 @@ button{
 	background-color: #faae27;
 	border:0;
 	font-weight: 700;
-	border-radius: 2px;
+	border-radius: 3px;
 	font-family: "raleway";
 	font-size: 15px;
 	display: block;
@@ -36,8 +33,43 @@ button{
 button:hover,button:focus{
 	outline:0;
 }
-
+ /*segunda seccion*/
 .segundo{
 	margin-top: 30px;
-	background-color: #C3D7FF;
 }
+#map{
+	
+	height: 70vh;
+	border: 10px solid #DDAA98;
+}
+
+/*para la ruta*/
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #origin-input,
+      #destination-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 200px;
+      }
+
+      #origin-input:focus,
+      #destination-input:focus {
+        border-color: #4d90fe;
+      }
+
+   
