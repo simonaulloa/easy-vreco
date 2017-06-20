@@ -56,17 +56,16 @@ var funcionError = function (error) {
         var destinationAutocomplete = new google.maps.places.Autocomplete(
             destinationInput, {placeIdOnly: true});
 
-        this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
-        this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+        this.setupPlaceChangedListener(originAutocomplete, 'origin-input');
+        this.setupPlaceChangedListener(destinationAutocomplete, 'destination-input');
       }
 
       // Sets a listener on a radio button to change the filter type on Places
       // Autocomplete.
-      AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
-        var radioButton = document.getElementById(id);
+      AutocompleteDirectionsHandler.prototype.setupClickListener = function(ruta) {
+        var radioButton = document.getElementById("ruta");
         var me = this;
         radioButton.addEventListener('click', function() {
-          me.travelMode = mode;
           me.route();
         });
       };
@@ -76,14 +75,14 @@ var funcionError = function (error) {
         autocomplete.bindTo('bounds', this.map);
         autocomplete.addListener('place_changed', function() {
           var place = autocomplete.getPlace();
-          if (!place.place_id) {
+          if (!place.origin-input) {
             window.alert("Selecciona un lugar en la lista.");
             return;
           }
-          if (mode === 'ORIG') {
-            me.originPlaceId = place.place_id;
+          if (mode === 'origin-input') {
+            me.originPlaceId = place.origin-input;
           } else {
-            me.destinationPlaceId = place.place_id;
+            me.destinationPlaceId = place.destination-input;
           }
           me.route();
         });
@@ -111,7 +110,6 @@ var funcionError = function (error) {
         // Cambiando icono
 
   		var marker = new google.maps.Marker({
-    	position: myLatLng,
     	map: map,
     	icon: 'bici.jpg'
   		});
